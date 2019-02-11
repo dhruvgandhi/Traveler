@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>Traveler</title>
+		<link rel="shortcut icon" type="image/png" href="Assets/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/topNav.css">
+		<link rel="stylesheet" href="css/contact.css">
+	</head>
+	<body>
+		<!-- Responsive Top Nav -->
+		<div class="topnav" id="myTopnav">
+			<a href="index.html" class="active">Home</a>
+			<a href="https://www.google.com/flights">Flights</a>
+			<a href="#contact">Contact</a>
+			<a href="#about">About</a>
+			<a href="javascript:void(0);" class="icon" onclick="topNav()">
+			<i class="fa fa-bars"></i>
+			</a>
+		</div>
+		<script>
+			function topNav() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+			x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+			}
+		</script>
+		<!--Contact Form-->
+		
+
+		<div class="container">
+		<h3>Contact Form</h3>
+		<form action="/action_page.php">
+			<label for="fname">First Name</label>
+			<input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+			<label for="lname">Last Name</label>
+			<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+			<label for="country">Country</label>
+			<select id="country" name="country">
+			<option value="australia">Australia</option>
+			<option value="canada">Canada</option>
+			<option value="usa">USA</option>
+			</select>
+
+			<label for="subject">Subject</label>
+			<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+			<input type="submit" value="Submit">
+		</form>
+		</div>
+	</body>
+</html>

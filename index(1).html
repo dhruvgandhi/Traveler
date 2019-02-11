@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<title>Traveler</title>
+		<link rel="shortcut icon" type="image/png" href="Assets/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/topNav.css">
+		<!-- Hamburger Menu
+		<style>
+			.container {
+			display: inline-block;
+			cursor: pointer;
+			}
+
+			.bar1, .bar2, .bar3 {
+			width: 35px;
+			height: 5px;
+			background-color: #333;
+			margin: 6px 0;
+			transition: 0.4s;
+			}
+
+			.change .bar1 {
+			-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+			transform: rotate(-45deg) translate(-9px, 6px);
+			}
+
+			.change .bar2 {opacity: 0;}
+
+			.change .bar3 {
+			-webkit-transform: rotate(45deg) translate(-8px, -8px);
+			transform: rotate(45deg) translate(-8px, -8px);
+			}
+		</style>-->
+	</head>
+	<body>
+		<!-- Hamburger 
+		<div class="container" onclick="myFunction(this)">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+		</div>
+		<script>
+		function myFunction(x) {
+		x.classList.toggle("change");
+		}
+		</script>-->
+		<!-- Responsive Top Nav -->
+		<div class="topnav" id="myTopnav">
+			<a href="index.html" class="active">Home</a>
+			<a href="https://www.google.com/flights">Flights</a>
+			<a href="contact.html">Contact</a>
+			<a href="#about">About</a>
+			<a href="javascript:void(0);" class="icon" onclick="topNav()">
+			<i class="fa fa-bars"></i>
+			</a>
+		</div>
+		<script>
+			function topNav() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+			x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+			}
+		</script>
+		<!--Slide Show-->
+		<div class="slideshow-container">
+
+		<div class="mySlides fade">
+		<div class="numbertext">1 / 3</div>
+		<img src="Assets/img/tajmahal.jpg" style="width:100%">
+		<div class="text">Taj Mahal</div>
+		</div>
+
+		<div class="mySlides fade">
+		<div class="numbertext">2 / 3</div>
+		<img src="Assets/img/thailand.jpg" style="width:100%">
+		<div class="text">Red Fort</div>
+		</div>
+
+		<div class="mySlides fade">
+		<div class="numbertext">3 / 3</div>
+		<img src="Assets/img/umaidbhavan.jpg" style="width:100%">
+		<div class="text">Umaid Bhavan Palace Hotel</div>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		</div>
+		<br>
+
+		<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span> 
+		<span class="dot" onclick="currentSlide(2)"></span> 
+		<span class="dot" onclick="currentSlide(3)"></span> 
+		</div>
+		<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1}    
+		if (n < 1) {slideIndex = slides.length}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";  
+		dots[slideIndex-1].className += " active";
+		}
+</script>
+		
+	</body>
+<html>
